@@ -1,12 +1,10 @@
 package org.example;
 
 import java.util.Scanner;
-import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner (System.in);
-        teclado.useLocale(Locale.US);
 
         System.out.println("Entre com a quantidade de ingressos de meia-entrada: ");
         int qtdMeia = teclado.nextInt();
@@ -14,9 +12,16 @@ public class Main {
         int qtdInteira = teclado.nextInt();
 
         System.out.println("Entre com o valor do ingresso de meia-entrada: ");
-        double ingMeia = teclado.nextDouble();
+        String Meia = teclado.nextLine();
+
         System.out.println("Agora entre com o valor do ingresso de entrada inteira: ");
-        double ingInteira = teclado.nextDouble();
+        String Inteira = teclado.nextLine();
+
+        String ingM  = Meia.replace(",",".");
+        double ingMeia = Double.parseDouble(ingM);
+
+        String ingI  = Inteira.replace(",",".");
+        double ingInteira = Double.parseDouble(ingI);
 
         double totalI = qtdInteira * ingInteira;
         double totalM = qtdMeia * ingMeia;
