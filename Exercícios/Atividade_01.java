@@ -11,6 +11,8 @@ public class Main {
         System.out.println("Entre com a quantidade de ingressos de entrada inteira: ");
         int qtdInteira = teclado.nextInt();
 
+        teclado.nextLine();
+
         System.out.println("Entre com o valor do ingresso de meia-entrada: ");
         String Meia = teclado.nextLine();
 
